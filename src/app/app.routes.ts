@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ProfileView } from './profile/profile-view/profile-view';
 import { Home } from './home/home';
+import { loadRemoteModule } from '@angular-architects/native-federation';
 
 export const routes: Routes = [
   {
@@ -10,6 +11,7 @@ export const routes: Routes = [
   },
     {
     path: 'profile',
-    component: ProfileView
+    // component: ProfileView,
+   loadChildren: () => import('./profile/profile.routes').then(m => m.PROFILE_ROUTES)
   }
 ];

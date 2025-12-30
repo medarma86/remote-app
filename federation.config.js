@@ -7,7 +7,9 @@ module.exports = withNativeFederation({
 
   exposes: {
     // './AppComponent': './src/app/app.ts',
-    './ProfileView': './src/app/profile/profile-view/profile-view.ts',
+    // './ProfileView': './src/app/profile/profile-view/profile-view.ts',
+    './profile-feature': './src/app/profile/profile.routes.ts',
+    './data-service': './src/app/profile/shared-data.service.ts'
   },
 
   shared: {
